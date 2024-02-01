@@ -222,7 +222,7 @@ class Company(Network):
         For dynamic systems, you can use network.receivers(MessageClass, [*MessageClasses]) to
         get a list of actors in the network that can receive all the passed MessageClasses.
         """
-        for a, b in combinations(actors, 2):
+        for a, b in combinations(self.actors, 2):
             self._graph.add_edge(a, b)
 
 

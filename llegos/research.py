@@ -302,7 +302,7 @@ class Network(Actor):
 
     def __init__(self, actors: t.Sequence[Actor], **kwargs):
         super().__init__(actors=actors, **kwargs)
-        for actor in actors:
+        for actor in self.actors:
             self._graph.add_edge(self, actor)
 
     def __getitem__(self, key: str | Actor | t.Any) -> Actor:
